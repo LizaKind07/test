@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMart - Home</title>
+    <meta name="description" content="Welcome to AutoMart - your one-stop destination for quality cars.">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailListElements = document.querySelectorAll(".emailList");
+  
+      emailListElements.forEach(function(element) {
+        const prefix = 'support@';
+        const domain = window.location.hostname;
+        const email = prefix + domain;
+  
+        element.setAttribute("href", "mailto:" + email);
+        element.innerHTML = email;
+      });
+    });
+    </script>
+  
+</head>
+
+<body>
+    <header>
+        <img src="images/AutoMart.png" alt="AutoMart Logo">
+        <nav>
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+
+        <section>
+            <h2>Welcome to AutoMart</h2>
+            <p>Explore our wide selection of quality cars and find the perfect vehicle for your needs.</p>
+        </section>
+
+        <!-- Inventory -->
+        <section id="inventory">
+            <h2>Inventory</h2>
+            <p>Discover our latest inventory of top-quality vehicles. Whether you're looking for a sleek sedan or a powerful SUV, we have the perfect car for you.</p>
+            <div class="car-listing">
+                <section class="product-card">
+                    <img src="images/auto1.jpg" alt="Car 1">
+                    <h2>Model X</h2>
+                </section>
+        
+                <section class="product-card">
+                    <img src="images/auto2.jpg" alt="Car 2">
+                    <h2>Model Y</h2>
+                </section>
+        
+                <section class="product-card">
+                    <img src="images/auto3.jpg" alt="Car 3">
+                    <h2>Model Z</h2>
+                </section>
+                <p>Experience the luxury and performance of our latest sedan model...</p>
+                <button onclick="location.href='/order?car=2022LuxurySedan'">View Details</button>
+        </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about AutoMart and our commitment to providing exceptional service and quality vehicles to our customers.</p>
+            <h2>Our Mission</h2>
+            <p>At AutoMart, our mission is to empower customers with the information and tools they need to make informed decisions about their vehicle purchase...</p>
+            <section>
+                <h2>Why Choose AutoMart?</h2>
+                <p>1. Diverse Inventory: Explore a wide range of makes and models to find the perfect car for your lifestyle...</p>
+                <p>2. Quality Assurance: Every car in our inventory undergoes a rigorous inspection to ensure it meets our high standards of quality...</p>
+                <p>3. Exceptional Service: Our dedicated team is here to assist you at every step of the car buying process...</p>
+            </section>
+            <section>
+                <h2>Meet Our Team</h2>
+                <p>Our team consists of passionate individuals who are dedicated to providing you with the best possible car buying experience. Get to know the faces behind AutoMart...</p>
+            </section>
+        </section>
+
+        <!-- Contact -->
+        <section id="contacts">
+            <h2>Contact</h2>
+            <p>Have questions or want to get in touch? Reach out to our team for assistance. We're here to help you!</p>
+            <div class="contact-info">
+                <div class="info-item">
+                    <h2>Visit Us</h2>
+
+                    <p>6 Rue Gauguin, 87100 Limoges, France</p>
+
+                </div>
+                <div class="info-item">
+                    <h2>Call Us</h2>
+
+                    <p>+1 123-456-7890</p>
+
+                </div>
+                <div class="info-item">
+                    <h2>Email Us</h2>
+
+                    <p class="emailList" onclick="location.href='mailto:support@automart.com'">support@automart.com</p>
+                    
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="/submit" method="post">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <section>
+            <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </section>
+        <section>
+            <p>&copy; 2023 AutoMart. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <div id="cookie-alert">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <button onclick="closeCookieAlert()">Got it!</button>
+    </div>
+
+    <script>
+        const emailListElements = document.querySelectorAll(".emailList");
+        const hostname = window.location.hostname;
+
+        emailListElements.forEach(function (element) {
+            prefix = 'support@';
+            element.setAttribute("href", "mailto:" + prefix + hostname);
+            element.innerHTML = prefix + hostname;
+        });
+
+        function closeCookieAlert() {
+            document.getElementById("cookie-alert").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

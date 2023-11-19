@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMart - Privacy Policy</title>
+    <meta name="description" content="Read AutoMart's Privacy Policy to understand how we handle and protect your personal information.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="AutoMart Logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/inventory">Inventory</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Privacy Policy</h1>
+
+        <p>At AutoMart, we are committed to protecting the privacy of our customers. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information. Please take a moment to review the following details:</p>
+
+        <section>
+            <h2>Information We Collect</h2>
+            <p>We collect personal information, such as names, email addresses, and phone numbers, when provided voluntarily by our customers. Additionally, we may gather information about your browsing activities on our website, such as the pages you visit.</p>
+        </section>
+
+        <section>
+            <h2>How We Use Your Information</h2>
+            <p>We use the collected information to process orders, provide customer service, and enhance your overall experience with AutoMart. Your information may also be used for marketing purposes, such as sending promotional materials or updates about our services.</p>
+        </section>
+
+        <section>
+            <h2>Information Sharing</h2>
+            <p>We do not sell or rent your personal information to third parties. However, we may share your information with trusted partners or service providers who assist us in conducting our business operations, such as order fulfillment or marketing campaigns.</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <section>
+            <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </section>
+        <section>
+            <p>&copy; 2023 AutoMart. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <div id="cookie-alert">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <button onclick="closeCookieAlert()">Got it!</button>
+    </div>
+
+    <script>
+        const emailListElements = document.querySelectorAll(".emailList");
+        const hostname = window.location.hostname;
+
+        emailListElements.forEach(function (element) {
+            prefix = 'support@';
+            element.setAttribute("href", "mailto:" + prefix + hostname);
+            element.innerHTML = prefix + hostname;
+        });
+
+        function closeCookieAlert() {
+            document.getElementById("cookie-alert").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

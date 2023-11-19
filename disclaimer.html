@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMart - Disclaimer</title>
+    <meta name="description" content="Read AutoMart's Disclaimer to understand the limitations and responsibilities related to the use of our website and services.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="AutoMart Logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/inventory">Inventory</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Disclaimer</h1>
+
+        <p>This disclaimer governs your use of AutoMart's website; by using our website, you accept this disclaimer in full. If you disagree with any part of this disclaimer, do not use our website. We reserve the right to modify these terms at any time.</p>
+
+        <section>
+            <h2>No warranties</h2>
+            <p>This website is provided "as is" without any representations or warranties, express or implied. AutoMart makes no representations or warranties in relation to this website or the information and materials provided on this website.</p>
+        </section>
+
+        <section>
+            <h2>Limitation of liability</h2>
+            <p>AutoMart will not be liable to you (whether under the law of contact, the law of torts, or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website for any direct, indirect, special or consequential loss; or for any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <section>
+            <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </section>
+        <section>
+            <p>&copy; 2023 AutoMart. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <div id="cookie-alert">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <button onclick="closeCookieAlert()">Got it!</button>
+    </div>
+
+    <script>
+        const emailListElements = document.querySelectorAll(".emailList");
+        const hostname = window.location.hostname;
+
+        emailListElements.forEach(function (element) {
+            prefix = 'support@';
+            element.setAttribute("href", "mailto:" + prefix + hostname);
+            element.innerHTML = prefix + hostname;
+        });
+
+        function closeCookieAlert() {
+            document.getElementById("cookie-alert").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
